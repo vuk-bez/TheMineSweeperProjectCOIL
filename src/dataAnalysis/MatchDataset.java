@@ -30,7 +30,6 @@ public class MatchDataset {
 	
 		 return matches.stream()
 				 .filter(m -> m.result().equals(result))
-				 .peek(m -> System.out.println("Passed filter: " + m))
 				 .mapToDouble(m-> (m.totalClicks()))
 		 		 .average()
 		 		 .orElse(0.0);
